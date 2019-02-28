@@ -1,0 +1,35 @@
+.pancake-in-list{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.pancake-in-list:hover{
+    background-color: aliceblue;
+}
+
+#rod{
+    background-color: darkblue;
+    width: 200px;
+    height: 20px;
+}
+
+#barbell, #left-side-rod, #right-side-rod{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+}
+
+
+
+.pancake-on-rod{
+    width: 15px;
+    background-color: blueviolet;
+}
+
