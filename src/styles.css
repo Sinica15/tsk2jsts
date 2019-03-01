@@ -1,3 +1,67 @@
+body{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 99vh;
+}
+
+#data-container{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+#add-pancakes, #pancakes-list{
+    width: 400px;
+    height: 500px;
+    background-color: aquamarine;
+    padding: 7px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+#add-pancakes input{
+    margin: 15%;
+}
+
+#barbell-score-resolve{
+    text-align: center;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+#barbell{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
 .pancake-in-list{
     border: 1px solid black;
     cursor: pointer;

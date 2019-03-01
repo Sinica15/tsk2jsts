@@ -3,6 +3,7 @@ import $ from 'jquery';
 import {pancakeObj} from './inputEventSetter.js';
 import {pancakesListRender} from './pancakesListRender.js';
 import {changeState} from './inputEventSetter.js';
+import {resolve} from './resolveScore.js';
 
 export function addPancake(pancObj, side){
     console.log('addPnac');
@@ -19,6 +20,7 @@ export function addPancake(pancObj, side){
     let selector = '#' + side + '-side-rod';
     $('#' + side + '-side-rod').append(out);
     toRemoveFromRod();
+    resolve();
 }
 
 function toRemoveFromRod(){
@@ -26,6 +28,6 @@ function toRemoveFromRod(){
         changeState(pancakeObj, $(this).attr('id'), 'in list');
         $(this).remove();
         pancakesListRender();
-        
+        resolve();
     });
 }

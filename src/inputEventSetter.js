@@ -6,12 +6,20 @@ import {addPancake} from './rodFunctions.js';
 
 export let pancakeObj = [];
 
+export function getObjProp(obj, id, key){
+    for(let i = 0; i < obj.length; i++){
+        if (parseInt(obj[i]['id'], 10) == parseInt(id, 10)){
+            return obj[i][key];
+        }
+    }
+}
+
 export function changeState(obj, id, toChange){
 //    console.log('changeStateBegin');
     for(let i = 0; i < obj.length; i++){
 //        console.log(obj);
 //        console.log(parseInt(obj[i]['id'], 10) + " " + parseInt(id, 10));
-        if (parseInt(obj[i]['id'], 10) == " " + parseInt(id, 10)){
+        if (parseInt(obj[i]['id'], 10) == parseInt(id, 10)){
             obj[i]['state'] = toChange;
             return;
         }
