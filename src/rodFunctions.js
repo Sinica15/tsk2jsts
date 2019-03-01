@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-import {pancakesListRender} from './pancakesListRender.js';
 import {pancakeObj} from './inputEventSetter.js';
+import {pancakesListRender} from './pancakesListRender.js';
 import {changeState} from './inputEventSetter.js';
 
 export function addPancake(pancObj, side){
