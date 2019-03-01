@@ -24,6 +24,16 @@
     -ms-flex-direction: row;
     -o-flex-direction: row;
     flex-direction: row;
+    height: 420px;
+    align-items: center;
+}
+
+#left-side-rod{
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -o-flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 
@@ -31,5 +41,19 @@
 .pancake-on-rod{
     width: 15px;
     background-color: blueviolet;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+#list-container{
+    min-height: 30px;
 }
 
