@@ -22,8 +22,8 @@ body{
 
 #add-pancakes, #pancakes-list{
     width: 400px;
-    height: 500px;
-    background-color: aquamarine;
+    height: 450px;
+    background-color: #e0d9ff;
     padding: 7px;
     display: -webkit-flex;
     display: -moz-flex;
@@ -35,6 +35,7 @@ body{
     -ms-flex-direction: column;
     -o-flex-direction: column;
     flex-direction: column;
+    border-radius: 5px;
 }
 
 #add-pancakes input{
@@ -55,26 +56,19 @@ body{
     flex-direction: column;
 }
 
-#barbell{
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}
-
 .pancake-in-list{
-    border: 1px solid black;
+    text-align: center;
+    margin: 4px 0;
+    border: 1px solid #c6b9ff;
     cursor: pointer;
+    background-color: #c6b9ff;
+    border-radius: 5px;
+    
 }
 
 .pancake-in-list:hover{
-    background-color: aliceblue;
-}
-
-#rod{
-    background-color: darkblue;
-    width: 200px;
-    height: 20px;
+/*    background-color: aliceblue;*/
+    border: 1px solid #2f00ff;
 }
 
 #barbell, #left-side-rod, #right-side-rod{
@@ -92,6 +86,17 @@ body{
     align-items: center;
 }
 
+#left-side-rod, #right-side-rod{
+    width: calc((100% - 200px) / 2);
+}
+
+#rod{
+    background-color: darkblue;
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+}
+
 #left-side-rod{
     -webkit-flex-direction: row-reverse;
     -moz-flex-direction: row-reverse;
@@ -103,6 +108,8 @@ body{
 
 
 .pancake-on-rod{
+    border-radius: 10px;
+    margin: 0 2px;
     width: 15px;
     background-color: blueviolet;
     display: -webkit-flex;
@@ -115,9 +122,30 @@ body{
     -ms-flex-direction: column;
     -o-flex-direction: column;
     flex-direction: column;
+    position: relative;
 }
+
+.pancake-part{
+    position: relative;
+    z-index: 10;
+}
+
+.on-rod{
+    position: absolute;
+    left: -10px;
+/*    top: 50%;*/
+    z-index: -1;
+    width: 35px;
+    height: 20px;
+    border-radius: 5px;
+    background-color: darkblue;
+}
+
+
 
 #list-container{
     min-height: 30px;
+    height: 100%;
+    overflow: auto;
 }
 

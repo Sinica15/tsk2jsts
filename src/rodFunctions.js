@@ -13,8 +13,9 @@ export function addPancake(pancObj, side){
     let out = "";
     
     out += '<div class="pancake-on-rod" id="' + $(pancObj).attr('id') + '-on-rod">';
-    out += '<div style="height: ' + weight*10 + 'px;"></div>';
-    out += '<div style="height: ' + weight*10 + 'px;"></div>';
+    out += '<div class="on-rod" style="top: calc(' + weight * 10 + 'px - 10px );"></div>';
+    out += '<div class="pancake-part" style="height: ' + weight * 10 + 'px;"></div>';
+    out += '<div class="pancake-part" style="height: ' + weight * 10 + 'px;"></div>';
     out += '</div>'; 
     
     let selector = '#' + side + '-side-rod';
