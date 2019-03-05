@@ -43,6 +43,7 @@ body{
 }
 
 #barbell-score-resolve{
+    min-width: 130px;
     text-align: center;
     display: -webkit-flex;
     display: -moz-flex;
@@ -110,8 +111,9 @@ body{
 .pancake-on-rod{
     border-radius: 10px;
     margin: 0 2px;
-    width: 15px;
+    width: 16px;
     background-color: blueviolet;
+    border: 1px solid blueviolet;
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -149,3 +151,27 @@ body{
     overflow: auto;
 }
 
+.mass-show{
+    position: absolute;
+/*    top: -20px;*/
+    left: -2px;
+    width: 20px;
+    height: 20px;
+    background-color: brown;
+    text-align: center;
+}
+
+.mass-show:before{
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 9px;
+    width: 2px;
+    height: 230px;
+    background-color: #ff1f70;
+}
+
+.showing-pancake{
+    border: 1px #ff1f70 solid;
+}

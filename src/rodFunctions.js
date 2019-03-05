@@ -21,7 +21,7 @@ export function addPancake(pancObj, side){
     let selector = '#' + side + '-side-rod';
     $('#' + side + '-side-rod').append(out);
     toRemoveFromRod();
-    resolve();
+    someEvents();
 }
 
 function toRemoveFromRod(){
@@ -29,6 +29,26 @@ function toRemoveFromRod(){
         changeState(pancakeObj, $(this).attr('id'), 'in list');
         $(this).remove();
         pancakesListRender();
-        resolve();
+        someEvents();
+    });
+}
+
+function someEvents(){
+    resolve();
+    showWeight();
+
+}
+
+function showWeight(){
+    $('.pancake-on-rod').off('mouseenter').off('mouseleave');
+    $('.pancake-on-rod')
+        .mouseenter(function(){
+            $(this).addClass('showing-pancake');
+            let top = parseInt($(this).css('height'), 10);
+            $(this).append('<div class="mass-show" style="top: ' + ( top / 2 - 230) + 'px;">' + (top / 20) + 'lb.</div>');
+    })
+        .mouseleave(function(){
+            $('.mass-show').remove();
+            $(this).removeClass('showing-pancake');
     });
 }
