@@ -45,7 +45,7 @@ function showWeight(){
         .mouseenter(function(){
             $(this).addClass('showing-pancake');
             let top = parseInt($(this).css('height'), 10);
-            $(this).append('<div class="mass-show" style="top: ' + ( top / 2 - 230) + 'px;">' + (top / 20) + 'lb.</div>');
+            $(this).append('<div class="mass-show" style="top: ' + ( top / 2 - 230) + 'px;">' + (top / 20) + ' Lb</div>');
     })
         .mouseleave(function(){
             $('.mass-show').remove();
